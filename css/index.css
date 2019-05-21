@@ -1,0 +1,69 @@
+body{
+	height: 100vh;
+	width: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Acme', sans-serif;
+	background-color: #f5f7a3;
+}
+h1{
+	margin:0;
+	font-size: 50px;
+	text-align: center;
+}
+.scores{
+	display: flex;
+	justify-content: center;
+}
+.scores p{
+	margin-bottom: 0;
+	margin-top: 15px;
+	font-size: 30px;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.stepHolder {
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 15px;
+	font-size: 35px;
+}
+.fild{
+	width: 60%;
+	height: 60%;
+	border-radius: 10px;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr; 
+	background-color: silver;
+	margin: auto;
+	margin-top: 5%;
+}
+.fild .row{
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.fild .row div{
+	max-width: 90%;
+	max-height: 90%;
+	border-radius: 10px;
+	margin-left: 4%;
+	margin-top: 4%;
+	box-shadow:0 0 5px rgba(0,0,0,0.5);
+	background-color: #7ea3dd;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 75px;
+}
+.fild .row div:hover{
+	background-color: #b0e28e;
+}
+button{
+	width: 20%;
+	height: 5%;
+	font-family: 'Acme', sans-serif;
+	font-size: 20px;
+	margin-left: 40%;
+	margin-top: 1%;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>XO</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+</head>
+<body>
+	<h1>TicTakToe</h1>
+	<div class="scores">
+			<p class="scoreX">ScoreX:<span></span></p>
+			<p class="scoreO">ScoreO:<span></span></p>
+	</div>
+	<p class="stepHolder">Curent step: <span>X</span></p>
+	<div class="fild">
+		<div class="row one">
+			<div class="sel"></div>
+			<div class="sel"></div>
+			<div class="sel"></div>
+		</div>
+		<div class="row two">
+			<div class="sel"></div>
+			<div class="sel"></div>
+			<div class="sel"></div>
+		</div>
+		<div class="row three">
+			<div class="sel"></div>
+			<div class="sel"></div>
+			<div class="sel"></div>
+		</div>
+	</div>
+	<button onclick="xo.func.restart(xo.el.squares)">Restart Game</button>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
