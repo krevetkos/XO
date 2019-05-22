@@ -63,7 +63,7 @@ button{
 	width: 20%;
 	height: 5%;
 	font-family: 'Acme', sans-serif;
-	font-size: 40px;
+	font-size: 30px;
 	margin-left: 40%;
 	margin-top: 1%;
 	border-radius: 10px;
@@ -74,5 +74,20 @@ button{
 }
 button:hover{
 	background-color: #5dd2d8;
+}
+@media(max-width: 720px){
+	button{
+	width: 20%;
+	height: 5%;
+	font-family: 'Acme', sans-serif;
+	font-size: 25px;
+	margin-left: 40%;
+	margin-top: 1%;
+	border-radius: 10px;
+	border: none;
+	box-shadow:0 0 5px rgba(0,0,0,0.5);
+	background-color: #60d1be;
+	color: #f5f7a3;
+}
 }
 
