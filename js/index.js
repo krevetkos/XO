@@ -8,7 +8,8 @@ xo.el.scoreX = document.querySelector('.scores .scoreX span');
 xo.el.scoreO = document.querySelector('.scores .scoreO span');
 xo.el.countScoreX = 0;
 xo.el.countScoreO = 0;
-xo.el.curentStep = "X"
+xo.el.curentStep = "X";
+xo.el.prevStep = "O"
 xo.func = {}
 xo.func.countScores = function(s){
 	if(s == "X"){
@@ -25,13 +26,15 @@ xo.func.step = function(event,text){
 		event.target.innerText = xo.el.curentStep;
 		xo.el.stepHolder.innerText  = "O";
 		xo.el.curentStep = "O";
+        xo.el.prevStep = "X"
 	}
 	if(event.target.classList.contains('sel') && xo.el.curentStep === "O" && !event.target.innerText) {
 		event.target.innerText = xo.el.curentStep;
 		xo.el.stepHolder.innerText  = "X";
 		xo.el.curentStep = "X";
+        xo.el.prevStep = "O"
 	}
-	xo.func.checkWin(xo.el.curentStep, xo.el.squares)
+	xo.func.checkWin(xo.el.prevStep, xo.el.squares)
 }
 xo.func.restart = function (element){
 	for(let i = 0; i <element.length; i++){
@@ -45,7 +48,7 @@ xo.func.checkWin = function (s, element){
         alert('Winner "'+s+'"');
     	xo.func.restart(element)
     	xo.func.countScores(s)
-    };
+    }
     }
     
     for (i = 0; i < 3; i++) {
@@ -67,4 +70,4 @@ xo.func.checkWin = function (s, element){
         xo.func.countScores(s)
     }
   }
-xo.el.fild.onclick =  xo.func.step;
+xo.el.fild.addEventListener("click", xo.func.step);
